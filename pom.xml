@@ -1,0 +1,75 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.redhat</groupId>
+    <artifactId>upload-demo-rf</artifactId>
+    <packaging>war</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>Richfaces File Upload Demo</name>
+
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <name>Maven Repository Switchboard</name>
+            <url>https://repo1.maven.org/maven2</url>
+        </repository>
+        <repository>
+            <id>jboss</id>
+            <url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.richfaces</groupId>
+            <artifactId>richfaces-a4j</artifactId>
+            <version>4.5.0.Final</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces</groupId>
+            <artifactId>richfaces-core</artifactId>
+            <version>4.5.0.Final</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- The following dependency provides the classes found
+            in richfaces-components-rich-4.5.0.Final.jar, which is included
+            in the Richfaces download but doesn't exist in Maven -->
+        <dependency>
+            <groupId>org.richfaces.compat</groupId>
+            <artifactId>richfaces-components-rich</artifactId>
+            <version>4.5.0.Alpha2</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.faces</groupId>
+            <artifactId>jsf-api</artifactId>
+            <version>1.2_15</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.5</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.5.10</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>upload-demo-rf</finalName>
+    </build>
+</project>
