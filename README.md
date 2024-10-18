@@ -8,9 +8,9 @@ Use the following command to generate the WAR file:
 
 The file `upload-demo-rf.war` will be created in the `target` directory, and can be deployed to EAP from there.
 
-# Adding a module for Primefaces
+# Adding a module for Richfaces
 
-Create a directory at `$EAP_HOME/modules/org/primefaces/main`
+Create a directory at `$EAP_HOME/modules/org/richfaces/main`
 
 Create the following `module.xml` file
 
@@ -33,13 +33,13 @@ Create the following `module.xml` file
         </dependencies>
     </module>
 
-Copy the three JAR files listed in `module.xml` to `$EAP_HOME/modules/org/primefaces/main`
+Copy the seven JAR files listed in `module.xml` to `$EAP_HOME/modules/org/richfaces/main`
 
 Use the command line to add the new module to the EE subsystem.
 
     ./jboss-cli.sh -c
     
-    [standalone@localhost:9990 /] /subsystem=ee:write-attribute(name=global-modules, value=[{"name"=>"org.primefaces","slot"=>"main"}])
+    [standalone@localhost:9990 /] /subsystem=ee:write-attribute(name=global-modules, value=[{"name"=>"org.richfaces","slot"=>"main"}])
     
     {"outcome" => "success"}
 
