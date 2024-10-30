@@ -8,9 +8,9 @@ Use the following command to generate the WAR file:
 
 The file `upload-demo-rf.war` will be created in the `target` directory, and can be deployed to EAP from there.
 
-# Adding a module for Primefaces
+# Adding a module for Richfaces
 
-Create a directory at `$EAP_HOME/modules/org/primefaces/main`
+Create a directory at `$EAP_HOME/modules/system/layers/base/org/richfaces/main`
 
 Create the following `module.xml` file
 
@@ -18,11 +18,15 @@ Create the following `module.xml` file
     
         <resources>
             <resource-root path="atmosphere-runtime-2.2.0.jar"/>
+            <resource-root path="commons-beanutils-1.9.4.jar"/>
+            <resource-root path="commons-collections-3.2.2.jar"/>
+            <resource-root path="commons-digester-2.1.jar"/>
+            <resource-root path="commons-logging-1.2.jar"/>
             <resource-root path="cssparser-0.9.14.jar"/>
             <resource-root path="guava-18.0.jar"/>
-            <resource-root path="richfaces-components-a4j-4.5.0.Final.jar"/>
-            <resource-root path="richfaces-components-rich-4.5.0.Final.jar"/>
-            <resource-root path="richfaces-core-4.5.0.Final.jar"/>
+            <resource-root path="richfaces-api-3.3.4.Final.jar"/>
+            <resource-root path="richfaces-impl-jsf2-3.3.4.Final.jar"/>
+            <resource-root path="richfaces-ui-3.3.4.Final.jar"/>
             <resource-root path="sac-1.3.jar"/>
         </resources>
     
@@ -33,14 +37,6 @@ Create the following `module.xml` file
         </dependencies>
     </module>
 
-Copy the three JAR files listed in `module.xml` to `$EAP_HOME/modules/org/primefaces/main`
-
-Use the command line to add the new module to the EE subsystem.
-
-    ./jboss-cli.sh -c
-    
-    [standalone@localhost:9990 /] /subsystem=ee:write-attribute(name=global-modules, value=[{"name"=>"org.primefaces","slot"=>"main"}])
-    
-    {"outcome" => "success"}
+Copy the JAR files listed in `module.xml` to `$EAP_HOME/modules/system/layers/base/org/richfaces/main`
 
 Restart the EAP server and deploy the WAR file.
