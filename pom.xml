@@ -27,28 +27,17 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.richfaces</groupId>
-            <artifactId>richfaces-a4j</artifactId>
-            <version>4.5.0.Final</version>
+            <groupId>org.richfaces.framework</groupId>
+            <artifactId>richfaces-impl-jsf2</artifactId>
+            <version>3.3.4.Final</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.richfaces</groupId>
-            <artifactId>richfaces-core</artifactId>
-            <version>4.5.0.Final</version>
+            <groupId>org.richfaces.ui</groupId>
+            <artifactId>richfaces-ui</artifactId>
+            <version>3.3.4.Final</version>
             <scope>provided</scope>
         </dependency>
-
-        <!-- The following dependency provides the classes found
-            in richfaces-components-rich-4.5.0.Final.jar, which is included
-            in the Richfaces download but doesn't exist in Maven -->
-        <dependency>
-            <groupId>org.richfaces.compat</groupId>
-            <artifactId>richfaces-components-rich</artifactId>
-            <version>4.5.0.Alpha2</version>
-            <scope>provided</scope>
-        </dependency>
-
         <dependency>
             <groupId>javax.faces</groupId>
             <artifactId>jsf-api</artifactId>
@@ -65,7 +54,32 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.5.10</version>
+            <version>1.2.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-digester</groupId>
+            <artifactId>commons-digester</artifactId>
+            <version>2.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.4</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
